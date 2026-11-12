@@ -229,7 +229,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=n=>"US$ "+n;
 const T={
-es:{bar:"Pedidos por WhatsApp · Fotos reales de frente y espalda",slogan:"Deportes",ph:"Buscar equipo o selección",sb:"Buscar",order:"Pedido",cats:"Categorías",home:"Inicio",all:"Todas las camisetas",seeall:"Ver todo",more:"Más",top:"Más pedidas",
+es:{help:"Ayuda",bar:"Pedidos por WhatsApp · Fotos reales de frente y espalda",slogan:"Deportes",ph:"Buscar equipo o selección",sb:"Buscar",order:"Pedido",cats:"Categorías",home:"Inicio",all:"Todas las camisetas",seeall:"Ver todo",more:"Más",top:"Más pedidas",
  gSel:"Selecciones",gLA:"Liga Argentina",gPL:"Premier League",gLL:"LaLiga",gSA:"Serie A",gL1:"Ligue 1",
  i1:"Fotos reales",i1d:"Frente y espalda de cada camiseta.",i2:"Personalizadas",i2d:"Elegí nombre y número y mirá cómo queda.",i3:"Pedido por WhatsApp",i3d:"Lo confirmás con una persona.",i4:"Envíos al país",i4d:"Te pasamos el seguimiento.",
  how:"Cómo comprar",s1:"Elegí",s1d:"Mirá las fotos de frente y espalda y marcá tu talle.",s2:"Personalizá",s2d:"Sumá nombre y número si querés. Lo ves en la espalda.",s3:"Mandá el pedido",s3d:"El mensaje se arma solo. Lo enviás por WhatsApp.",s4:"Recibila",s4d:"Confirmamos disponibilidad, pago y envío.",
@@ -241,7 +241,7 @@ es:{bar:"Pedidos por WhatsApp · Fotos reales de frente y espalda",slogan:"Depor
  so1:"Destacadas",so2:"Precio: menor a mayor",so3:"Precio: mayor a menor",so4:"Equipo A–Z",added:"Agregada a tu pedido ✓",
  w0:"Hola! Quiero consultar por una camiseta.",wc:"Hola! Quiero consultar por la camiseta ",wn:"un cliente nuevo",wi:"Hola! Soy {n}{c}. Quiero hacer este pedido:",wf:" de ",wsz:"Talle",wcu:"Personalizada",wt:"Total estimado",
  kit:{Local:"Local","Local (manga larga)":"Local (manga larga)",Alternativa:"Alternativa",Tercera:"Tercera","Tercera (manga larga)":"Tercera (manga larga)"},team:{}},
-en:{bar:"Orders via WhatsApp · Real photos, front and back",slogan:"Deportes",ph:"Search team or national side",sb:"Search",order:"Order",cats:"Categories",home:"Home",all:"All jerseys",seeall:"See all",more:"More",top:"Best sellers",
+en:{help:"Help",bar:"Orders via WhatsApp · Real photos, front and back",slogan:"Deportes",ph:"Search team or national side",sb:"Search",order:"Order",cats:"Categories",home:"Home",all:"All jerseys",seeall:"See all",more:"More",top:"Best sellers",
  gSel:"National teams",gLA:"Argentine League",gPL:"Premier League",gLL:"LaLiga",gSA:"Serie A",gL1:"Ligue 1",
  i1:"Real photos",i1d:"Front and back of every jersey.",i2:"Customizable",i2d:"Pick a name and number and see how it looks.",i3:"Order by WhatsApp",i3d:"Confirm it with a real person.",i4:"Nationwide shipping",i4d:"We send you the tracking.",
  how:"How to buy",s1:"Choose",s1d:"Check the front and back photos and pick your size.",s2:"Customize",s2d:"Add a name and number if you like. See it on the back.",s3:"Send your order",s3d:"The message writes itself. Send it on WhatsApp.",s4:"Get it",s4d:"We confirm availability, payment and shipping.",
@@ -253,7 +253,7 @@ en:{bar:"Orders via WhatsApp · Real photos, front and back",slogan:"Deportes",p
  so1:"Featured",so2:"Price: low to high",so3:"Price: high to low",so4:"Team A–Z",added:"Added to your order ✓",
  w0:"Hi! I'd like to ask about a jersey.",wc:"Hi! I'd like to ask about the jersey ",wn:"a new customer",wi:"Hi! I'm {n}{c}. I'd like to place this order:",wf:" from ",wsz:"Size",wcu:"Custom",wt:"Estimated total",
  kit:{Local:"Home","Local (manga larga)":"Home (long sleeve)",Alternativa:"Away",Tercera:"Third","Tercera (manga larga)":"Third (long sleeve)"},team:{"Inter de Milán":"Inter Milan","Atlético de Madrid":"Atlético Madrid",Argentina:"Argentina"}},
-pt:{bar:"Pedidos pelo WhatsApp · Fotos reais de frente e costas",slogan:"Deportes",ph:"Buscar time ou seleção",sb:"Buscar",order:"Pedido",cats:"Categorias",home:"Início",all:"Todas as camisas",seeall:"Ver tudo",more:"Mais",top:"Mais pedidas",
+pt:{help:"Ajuda",bar:"Pedidos pelo WhatsApp · Fotos reais de frente e costas",slogan:"Deportes",ph:"Buscar time ou seleção",sb:"Buscar",order:"Pedido",cats:"Categorias",home:"Início",all:"Todas as camisas",seeall:"Ver tudo",more:"Mais",top:"Mais pedidas",
  gSel:"Seleções",gLA:"Liga Argentina",gPL:"Premier League",gLL:"LaLiga",gSA:"Serie A",gL1:"Ligue 1",
  i1:"Fotos reais",i1d:"Frente e costas de cada camisa.",i2:"Personalizadas",i2d:"Escolha nome e número e veja como fica.",i3:"Pedido pelo WhatsApp",i3d:"Você confirma com uma pessoa.",i4:"Envios para todo o país",i4d:"Enviamos o rastreio.",
  how:"Como comprar",s1:"Escolha",s1d:"Veja as fotos de frente e costas e marque seu tamanho.",s2:"Personalize",s2d:"Adicione nome e número se quiser. Você vê nas costas.",s3:"Envie o pedido",s3d:"A mensagem se monta sozinha. Envie pelo WhatsApp.",s4:"Receba",s4d:"Confirmamos disponibilidade, pagamento e envio.",
@@ -275,7 +275,7 @@ const descOf=p=>lang==="en"?p.d_en:lang==="pt"?p.d_pt:p.d;
 const ICON={cart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>',chev:'<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg>'};
 const GR=[["gSel","Selecciones",["sel"]],["gLA","Liga Argentina",["boca","river"]],["gPL","Premier League",["premier"]],["gLL","LaLiga",["laliga"]],["gSA","Serie A",["seriea"]],["gL1","Ligue 1",["ligue1"]]];
 let buyer={n:"",c:""};
-let st={view:"home",team:"all",cat:null,q:"",sort:"rec"},cur=null,cart=[];
+let st={view:"home",team:"all",cat:null,q:"",sort:"rec",help:null},cur=null,cart=[];
 const waUrl=x=>"https://wa.me/"+WA+"?text="+encodeURIComponent(x);
 const openG=new Set();
 function statics(){
@@ -302,6 +302,7 @@ function nav(){
     h+=`<button class="ni" type="button" data-g="${esc(g[1])}" aria-expanded="${isOpen}"><span>${gname(g)}</span><em>${P.filter(p=>cs.includes(p.cat)).length}</em>${ICON.chev}</button>`;
     if(isOpen)h+=`<div class="sub"><button class="ni" type="button" data-cat="${esc(g[1])}" aria-pressed="${st.cat===g[1]&&st.team==="all"}"><span>${t("seeall")}</span></button>`+teams.map(n=>`<button class="ni" type="button" data-t="${esc(n)}" aria-pressed="${st.team===n}"><span>${esc(n==="Argentina"?(lang==="es"?"Selección Argentina":lang==="en"?"Argentina national team":"Seleção Argentina"):teamN(n))}</span><em>${P.filter(p=>p.team===n).length}</em></button>`).join("")+`</div>`;
   });
+  h+=`<h2 style="margin:18px 4px 6px">${t("help")}</h2>`+[["how",t("how")],["sizes",t("sg")],["faq",t("faq")]].map(([k,l])=>`<button class="ni" type="button" data-help="${k}" aria-pressed="${st.view==="help"&&st.help===k}"><span>${l}</span></button>`).join("");
   $("nav").innerHTML=h}
 function card(p){return `<button type="button" class="card" data-id="${p.id}" aria-label="${esc(title(p))}, ${money(p.pr)}"><div class="ph"><img src="${p.f}" alt="${esc(title(p))}" loading="lazy">${p.b?`<img class="bk" src="${p.b}" alt="" loading="lazy">`:""}</div><div class="cbd"><small>${esc(p.season)} · ${esc(kitN(p.kit))}</small><h3>${esc(teamN(p.team))}</h3><div class="pr"><span class="price">${money(p.pr)}</span><span class="add" aria-hidden="true">${ICON.cart}</span></div></div></button>`}
 function sortArr(a){if(st.sort==="lo")return [...a].sort((x,y)=>x.pr-y.pr);if(st.sort==="hi")return [...a].sort((x,y)=>y.pr-x.pr);if(st.sort==="az")return [...a].sort((x,y)=>teamN(x.team).localeCompare(teamN(y.team)));return a}
@@ -310,9 +311,11 @@ function listF(){
   return sortArr(P.filter(p=>(st.team==="all"||p.team===st.team)&&(!g||g[2].includes(p.cat))&&(!st.q||(title(p)+" "+p.team+" "+p.brand+" "+p.sponsor).toLowerCase().includes(st.q))))}
 const SV={i1:'<rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/>',i2:'<path d="M8 3 2.5 6.5l2.2 4 2.3-1V21h10V9.5l2.3 1 2.2-4L16 3c-.6 1.7-2 2.6-4 2.6S8.6 4.7 8 3Z"/>',i3:'<path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20Z"/>',i4:'<path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>'};
 const info=()=>`<div class="info4">${["i1","i2","i3","i4"].map(k=>`<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">${SV[k]}</svg><p style="margin:0"><b>${t(k)}</b><span>${t(k+"d")}</span></p></div>`).join("")}</div>`;
-const lower=()=>`<section class="sec" id="como"><div class="sh"><h2>${t("how")}</h2></div><div class="steps">${[1,2,3,4].map(n=>`<div class="st"><i>${n}</i><b>${t("s"+n)}</b><p>${t("s"+n+"d")}</p></div>`).join("")}</div></section>
-<div class="two"><div class="box" id="talles"><h2>${t("sg")}</h2><div class="tw"><table><thead><tr><th>${t("size")}</th><th>${t("chest")}</th><th>${t("len")}</th></tr></thead><tbody><tr><td>S</td><td>94–99</td><td>68</td></tr><tr><td>M</td><td>100–105</td><td>70</td></tr><tr><td>L</td><td>106–111</td><td>72</td></tr><tr><td>XL</td><td>112–117</td><td>74</td></tr><tr><td>2XL</td><td>118–124</td><td>76</td></tr></tbody></table></div><p class="note">${t("sgn")}</p></div>
-<div class="box" id="faq"><h2>${t("faq")}</h2>${[1,2,3,4,5].map(n=>`<details><summary>${t("q"+n)}</summary><p>${t("a"+n)}</p></details>`).join("")}</div></div>`;
+const HP={
+how:()=>`<section class="sec" id="como"><div class="sh"><h2>${t("how")}</h2></div><div class="steps">${[1,2,3,4].map(n=>`<div class="st"><i>${n}</i><b>${t("s"+n)}</b><p>${t("s"+n+"d")}</p></div>`).join("")}</div></section>`,
+sizes:()=>`<div class="box" id="talles"><h2>${t("sg")}</h2><div class="tw"><table><thead><tr><th>${t("size")}</th><th>${t("chest")}</th><th>${t("len")}</th></tr></thead><tbody><tr><td>S</td><td>94–99</td><td>68</td></tr><tr><td>M</td><td>100–105</td><td>70</td></tr><tr><td>L</td><td>106–111</td><td>72</td></tr><tr><td>XL</td><td>112–117</td><td>74</td></tr><tr><td>2XL</td><td>118–124</td><td>76</td></tr></tbody></table></div><p class="note">${t("sgn")}</p></div>`,
+faq:()=>`<div class="box" id="faq"><h2>${t("faq")}</h2>${[1,2,3,4,5].map(n=>`<details><summary>${t("q"+n)}</summary><p>${t("a"+n)}</p></details>`).join("")}</div>`};
+const HN={how:"how",sizes:"sg",faq:"faq"};
 function sec(h,arr,set){return arr.length?`<section class="sec"><div class="sh"><h2>${esc(h)}</h2><button class="more" type="button" data-set="${esc(set)}">${t("more")}</button></div><div class="grid">${arr.slice(0,10).map(card).join("")}</div></section>`:""}
 function render(){
   nav();$("tb-home").classList.toggle("on",st.view==="home");
@@ -321,7 +324,9 @@ function render(){
     const circ=`<div class="circ"><div class="crow">${teams.map(p=>`<button class="cb" type="button" data-t="${esc(p.team)}"><span><img src="${p.f}" alt="" loading="lazy"></span><b>${esc(teamN(p.team))}</b></button>`).join("")}</div></div>`;
     const G=k=>GR.find(g=>g[0]===k);
     const gs=k=>{const g=G(k);return sec(gname(g),P.filter(p=>g[2].includes(p.cat)),"cat:"+g[1])};
-    $("main").innerHTML=circ+sec(t("top"),P.slice(0,10),"all")+gs("gSel")+gs("gLA")+gs("gPL")+gs("gLL")+gs("gSA")+info()+lower();
+    $("main").innerHTML=circ+sec(t("top"),P.slice(0,10),"all")+gs("gSel")+gs("gLA")+gs("gPL")+gs("gLL")+gs("gSA")+info();
+  }else if(st.view==="help"){
+    $("main").innerHTML=`<div class="crumb"><button type="button" data-go="home">${t("home")}</button> / ${t("help")} / ${esc(t(HN[st.help]))}</div>`+HP[st.help]();
   }else{
     const a=listF();
     const g=st.cat?GR.find(x=>x[1]===st.cat):null;
@@ -331,7 +336,7 @@ function render(){
   }
   fb()}
 function fb(){const f=$("fbtn");if(f)f.style.display=matchMedia("(max-width:860px)").matches?"inline-block":"none"}
-function go(v,o={}){st.view=v;st.team=o.team||"all";st.cat=o.cat||null;st.q=o.q||"";if(v==="home")$("q").value="";render();closeSide();scrollTo({top:0,behavior:"smooth"})}
+function go(v,o={}){st.help=o.help||null;st.view=v;st.team=o.team||"all";st.cat=o.cat||null;st.q=o.q||"";if(v==="home")$("q").value="";render();closeSide();scrollTo({top:0,behavior:"smooth"})}
 function closeSide(){$("side").classList.remove("on");$("sbg").classList.remove("on")}
 function open(id){
   const p=P.find(x=>x.id===id);cur={p,size:null,view:"f",name:"",num:"",qty:1};
@@ -363,7 +368,8 @@ function renderCart(){
 function toast(x){const e=$("toast");e.textContent=x;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1800)}
 document.addEventListener("click",e=>{
   const x=e.target;let b;
-  if((b=x.closest('a[href^="#"]'))&&["#como","#talles","#faq"].includes(b.getAttribute("href"))){e.preventDefault();const id=b.getAttribute("href").slice(1);close();$("dr").classList.remove("on");if(st.view!=="home")go("home");setTimeout(()=>{const el=$(id);if(el)el.scrollIntoView({behavior:"smooth",block:"start"})},st.view==="home"?60:0);return}
+  if((b=x.closest('a[href^="#"]'))&&["#como","#talles","#faq"].includes(b.getAttribute("href"))){e.preventDefault();close();$("dr").classList.remove("on");go("help",{help:{"#como":"how","#talles":"sizes","#faq":"faq"}[b.getAttribute("href")]});return}
+  if(b=x.closest("[data-help]")){go("help",{help:b.dataset.help});return}
   if(b=x.closest(".card,.rc")){open(b.dataset.id);return}
   if(x.closest("#home")){e.preventDefault();go("home");return}
   if(b=x.closest("[data-go]")){e.preventDefault();go(b.dataset.go==="home"?"home":"list");return}
