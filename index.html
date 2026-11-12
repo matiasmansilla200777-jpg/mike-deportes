@@ -326,7 +326,7 @@ function render(){
     const a=listF();
     const g=st.cat?GR.find(x=>x[1]===st.cat):null;
     const name=st.q?`${t("res")} “${st.q}”`:st.team!=="all"?(st.team==="Argentina"?(lang==="es"?"Selección Argentina":lang==="en"?"Argentina national team":"Seleção Argentina"):teamN(st.team)):g?gname(g):t("all");
-    $("main").innerHTML=`<div class="crumb"><button type="button" data-go="home">${t("home")}</button> / ${esc(name)}</div><section class="sec"><div class="sh"><h2>${esc(name)} <small>· ${a.length} ${a.length===1?t("one"):t("many")}</small></h2><div class="sort"><button class="more fbtn" id="fbtn" type="button">${t("cats")}</button><select class="sel" id="sort" aria-label="Sort"><option value="rec">${t("so1")}</option><option value="lo">${t("so2")}</option><option value="hi">${t("so3")}</option><option value="az">${t("so4")}</option></select></div></div><div class="grid">${a.length?a.map(card).join(""):`<div class="empty">${t("none")}</div>`}</div></section>`+lower();
+    $("main").innerHTML=`<div class="crumb"><button type="button" data-go="home">${t("home")}</button> / ${esc(name)}</div><section class="sec"><div class="sh"><h2>${esc(name)} <small>· ${a.length} ${a.length===1?t("one"):t("many")}</small></h2><div class="sort"><button class="more fbtn" id="fbtn" type="button">${t("cats")}</button><select class="sel" id="sort" aria-label="Sort"><option value="rec">${t("so1")}</option><option value="lo">${t("so2")}</option><option value="hi">${t("so3")}</option><option value="az">${t("so4")}</option></select></div></div><div class="grid">${a.length?a.map(card).join(""):`<div class="empty">${t("none")}</div>`}</div></section>`;
     $("sort").value=st.sort;
   }
   fb()}
@@ -363,6 +363,7 @@ function renderCart(){
 function toast(x){const e=$("toast");e.textContent=x;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1800)}
 document.addEventListener("click",e=>{
   const x=e.target;let b;
+  if((b=x.closest('a[href^="#"]'))&&["#como","#talles","#faq"].includes(b.getAttribute("href"))){e.preventDefault();const id=b.getAttribute("href").slice(1);close();$("dr").classList.remove("on");if(st.view!=="home")go("home");setTimeout(()=>{const el=$(id);if(el)el.scrollIntoView({behavior:"smooth",block:"start"})},st.view==="home"?60:0);return}
   if(b=x.closest(".card,.rc")){open(b.dataset.id);return}
   if(x.closest("#home")){e.preventDefault();go("home");return}
   if(b=x.closest("[data-go]")){e.preventDefault();go(b.dataset.go==="home"?"home":"list");return}
